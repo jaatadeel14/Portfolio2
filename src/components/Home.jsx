@@ -32,7 +32,8 @@ const Home = () => {
         />
         </div>
         <br />
-        <p className='text-sm md:text-md text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, beatae maiores perferendis natus pariatur fugit quia enim, incidunt hic quaerat corporis soluta aliquam non ipsa excepturi veniam totam impedit? Quia!</p>
+        <p className='text-sm md:text-md text-justify'>
+        Motivated Computer Engineering student at Suleyman Demirel University, passionate about innovation and problem-solving. Aspiring to develop a programming career to create impactful tech solutions. Excited to connect with industry professionals and make a difference.</p>
         <br />
 
         {/* Social media Icon */}
