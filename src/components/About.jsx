@@ -15,9 +15,9 @@ const About = () => {
           Education & Training
         </h1>
         <span>
-          [Degree/Certification], [Institution], [Year] [Degree/Certification],
-          [Institution], [Year] [Relevant Course], [Platform/Institution],
-          [Year]
+          [The Spirit School/Computer Science] [High School] [2016/18] <br /> 
+          [Pak Turk Maarif College/Pre Engineering][College] [2018,2020]<br /> 
+          [Suleyman Demirel University/Computer Engineering] [University] [2021 Present]
         </span>
         <br />
         <br />
@@ -25,10 +25,12 @@ const About = () => {
           Skills & Expertise
         </h1>
         <span>
-          Proficient in [Programming Languages] Experienced with [Software
-          Tools/Technologies] Strong grasp of [Design Principles/Concepts]
-          Excellent problem-solving skills Effective communicator and
-          collaborator
+        <li>Proficient in HTML, CSS, JavaScript</li>
+        <li>Experienced with React.js, Node.js, MongoDB</li>
+        <li>Strong grasp of responsive web design and user interface principles</li>
+        <li>Excellent problem-solving skills</li>
+        <li>Effective communicator and collaborator</li>
+        <li>Know more then 6 human languages (English,Turkish,Urdu,Hindi,Punjabi,Haryanvi)</li>
         </span>
         <br />
         <br />
@@ -36,11 +38,13 @@ const About = () => {
           Professional Experience
         </h1>
         <span>
-          [Job Title], [Company/Organization], [Dates] [Brief description of
-          responsibilities and achievements] [Job Title],
-          [Company/Organization], [Dates] [Brief description of responsibilities
-          and achievements] [Freelance/Contract Work], [Client/Organization],
-          [Dates] [Brief description of projects and contributions]
+        <h3 className='font-bold text-red-600'>Junior Front-End Developer, Example Study Blogs</h3>
+        <p><em>January 2024 - June 2024</em></p>
+        <p>Developed and maintained web applications using React.js and JavaScript. Collaborated with the design team to create responsive and user-friendly interfaces. Assisted in troubleshooting and debugging issues in existing applications.It is university Class project</p>
+        <h3  className='font-bold text-red-600'>Web Development Intern, Hype Web Co.</h3>
+        <p><em>July 2024 - Present</em></p>
+        <p>Contributed to the development of the company's main website using HTML, CSS, and JavaScript. Gained hands-on experience in implementing responsive design and ensuring cross-browser compatibility. Participated in code reviews and team meetings.</p>
+       
         </span>
         <br />
         <br />
@@ -48,8 +52,9 @@ const About = () => {
           Achievements & Awards
         </h1>
         <span>
-          [Award/Recognition], [Organization/Institution], [Year] [Achievement],
-          [Organization/Platform], [Year]
+        <h3>Excellence High Achiever Award ( <em className='text-red-600'>Pakturk Marif College, 2019</em> )</h3> 
+        <h3>Turkish Language C1 Certificate (<em className='text-red-600'>Suleyman Demirel University, 2021</em> )</h3>
+      
         </span>
         <br />
         <br />
