@@ -46,6 +46,48 @@ const About = () => {
         <p>Contributed to the development of the company's main website using HTML, CSS, and JavaScript. Gained hands-on experience in implementing responsive design and ensuring cross-browser compatibility. Participated in code reviews and team meetings.</p>
        
         </span>
+
+
+
+          
+
+        <br/>
+        <h1 className="text-green-600 font-semibold text-xl">
+          Pojects
+        </h1>
+        <span>
+        <h3 className='font-bold text-red-600'>Junior Front-End Developer,Ux Service website</h3>
+        {/* <p><em>August 2024 - September 2024</em></p> */}
+        <p>UXService designs seamless, user-centric digital experiences for websites and applications. We blend creativity with functionality, helping businesses deliver intuitive, engaging, and impactful solutions that users love. Crafting excellence, one experience at a time.</p>
+        
+        <h3  className='font-bold text-red-600'>Temperature and Humidity measurement</h3>
+        {/* <p><em>June 2024 - July 2024</em></p> */}
+        <p>Accurately monitor temperature and humidity with our reliable, user-friendly sensor system. Designed for precision and efficiency, it ensures seamless environmental tracking for homes, industries, and smart applications. Stay informed, stay comfortable."</p>
+
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         <br />
         <br />
         <h1 className="text-green-600 font-semibold text-xl">
