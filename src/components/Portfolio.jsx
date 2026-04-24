@@ -39,35 +39,41 @@ const Portfolio = () => {
         },
       ];
   return (
-    <div name="Portfolio" className='max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10 animate-fade-in'>
-      
+    <div name="Portfolio" className='max-w-screen-2xl container mx-auto px-4 py-12 md:px-20 md:py-16 animate-fade-in'>
       <div>
-        <h1 className="text-3xl font-bold mb-5 dark:text-white">Portfolio</h1>
-        <span className='underline font-semibold text-gray-700 dark:text-gray-300'>Featured Projects</span>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Portfolio</p>
+        <h1 className="font-display mb-2 text-3xl font-bold tracking-tight text-stone-900 dark:text-white md:text-4xl">Tech stack &amp; work</h1>
+        <span className='text-sm font-medium text-stone-500 dark:text-slate-500'>Featured projects &amp; learning focus</span>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8'>
+        <div className='my-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {
                cardItem.map(({id,logo, name})=>(
 
-                <div className="border-2 border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-6 cursor-pointer hover:scale-105 duration-300 bg-white dark:bg-gray-800 transition-all hover:shadow-xl" key={id}>
-                       <div className='flex justify-center mb-4'>
-                         <img className='w-[120px] h-[120px] p-2 rounded-full border-2 border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700' src={logo} alt={name} />
+                <div
+                  className="group relative cursor-pointer overflow-hidden rounded-2xl border border-stone-200/80 bg-white/70 p-6 shadow-card backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-glow dark:border-slate-800/80 dark:bg-slate-900/50"
+                  key={id}
+                >
+                       <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gradient-to-br from-emerald-400/20 to-teal-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
+                       <div className='relative mb-4 flex justify-center'>
+                         <div className="rounded-2xl border border-stone-200/80 bg-stone-50/80 p-3 dark:border-slate-700 dark:bg-slate-800/50">
+                           <img className='h-24 w-24 rounded-xl object-contain' src={logo} alt={name} />
+                         </div>
                        </div>
                        <div>
-                        <div className='font-bold text-xl mb-2 text-center dark:text-white'>{name}</div>
-                        <p className='text-gray-700 dark:text-gray-300 text-center text-sm mb-4'>Continuously learning and improving skills with hands-on projects and real-world applications.</p>
+                        <div className='mb-2 text-center font-display text-xl font-bold text-stone-900 dark:text-white'>{name}</div>
+                        <p className='mb-5 text-center text-sm leading-relaxed text-stone-600 dark:text-slate-400'>Continuously learning and improving skills with hands-on projects and real-world applications.</p>
                        </div>
-                       <div className='flex justify-center space-x-3'>
-                        <button  className='bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded transition-colors duration-200' >Video</button>
-                        <button className='bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white font-semibold px-4 py-2 rounded transition-colors duration-200' >Source Code</button>
+                       <div className='relative flex flex-wrap justify-center gap-2'>
+                        <button type="button" className='rounded-lg bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 active:scale-[0.98]'>Video</button>
+                        <button type="button" className='rounded-lg border border-emerald-500/50 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-500/20 dark:text-emerald-300 dark:hover:bg-emerald-500/20 active:scale-[0.98]'>Source code</button>
                        </div>
                 </div>
                ))
 
             }
         </div>
-      </div> 
-        </div>
+      </div>
+    </div>
   )
 }
 

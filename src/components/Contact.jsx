@@ -26,52 +26,53 @@ const Contact = () => {
   }
   return (
    <>
-   <div name="Contact" className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16 animate-fade-in'>
-    <h1 className='text-3xl font-bold mb-4 dark:text-white'>Contact Me</h1>
-    <span className='text-gray-700 dark:text-gray-300'>Please fill out the form below to contact me </span>
-    <div className='flex flex-col items-center justify-center mt-5'>
-        <form 
-        onSubmit={handleSubmit(onSubmit)}  
-        className='bg-slate-200 dark:bg-gray-800 w-full max-w-md px-8 py-6 rounded-xl shadow-lg'>
-            <h1 className='text-xl font-semibold mb-4 dark:text-white'>Send Your Message </h1>
-            <div className='flex flex-col mb-4'>
-            <label className="block text-gray-700 dark:text-gray-300 mb-1 font-medium">Full Name</label>
+   <div name="Contact" className='max-w-screen-2xl container mx-auto px-4 py-12 md:px-20 md:py-20 animate-fade-in'>
+    <p className='mb-2 text-sm font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400'>Contact</p>
+    <h1 className='font-display mb-3 text-3xl font-bold tracking-tight text-stone-900 dark:text-white md:text-4xl'>Let&apos;s talk</h1>
+    <span className='text-stone-600 dark:text-slate-400'>Fill out the form below and I&apos;ll get back to you.</span>
+    <div className='mt-8 flex flex-col items-center'>
+        <form
+        onSubmit={handleSubmit(onSubmit)}
+        className='w-full max-w-md rounded-2xl border border-stone-200/80 bg-white/80 px-6 py-8 shadow-card backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-900/60'>
+            <h2 className='font-display mb-6 text-lg font-bold text-stone-900 dark:text-white'>Send a message</h2>
+            <div className='flex flex-col gap-1.5 mb-4'>
+            <label className="text-sm font-medium text-stone-700 dark:text-slate-300" htmlFor="name">Full name</label>
               <input
                 {...register("name", { required: true })}
-                className="shadow rounded-lg appearance-none border border-gray-300 dark:border-gray-600 py-2 px-3 text-gray-700 dark:text-gray-300 dark:bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 transition-all"
+                className="rounded-xl border border-stone-200/90 bg-stone-50/80 px-3.5 py-2.5 text-stone-900 placeholder:text-stone-400 focus:border-emerald-500/50 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-600 dark:bg-slate-800/80 dark:text-slate-100 dark:placeholder:text-slate-500"
                 id="name"
                 name="name"
                 type="text"
-                placeholder="Enter your full name"
+                placeholder="Your name"
               />
-               {errors.name && <span className="text-red-500 text-sm mt-1">This field is required</span>}
+               {errors.name && <span className="text-sm text-rose-500">This field is required</span>}
             </div>
-            <div className='flex flex-col mb-4'>
-            <label className="block text-gray-700 dark:text-gray-300 mb-1 font-medium">Email Address</label>
+            <div className='flex flex-col gap-1.5 mb-4'>
+            <label className="text-sm font-medium text-stone-700 dark:text-slate-300" htmlFor="email">Email</label>
               <input
                 {...register("email", { required: true })}
-                className="shadow rounded-lg appearance-none border border-gray-300 dark:border-gray-600 py-2 px-3 text-gray-700 dark:text-gray-300 dark:bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 transition-all"
+                className="rounded-xl border border-stone-200/90 bg-stone-50/80 px-3.5 py-2.5 text-stone-900 placeholder:text-stone-400 focus:border-emerald-500/50 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-600 dark:bg-slate-800/80 dark:text-slate-100 dark:placeholder:text-slate-500"
                 id="email"
                 name="email"
                 type="email"
-                placeholder="Enter your email address"
+                placeholder="you@example.com"
               />
-               {errors.email && <span className="text-red-500 text-sm mt-1">This field is required</span>}
+               {errors.email && <span className="text-sm text-rose-500">This field is required</span>}
             </div>
-            <div className='flex flex-col mb-4'>
-            <label className="block text-gray-700 dark:text-gray-300 mb-1 font-medium">Message</label>
+            <div className='flex flex-col gap-1.5 mb-6'>
+            <label className="text-sm font-medium text-stone-700 dark:text-slate-300" htmlFor="message">Message</label>
 
               <textarea
                 {...register("message", { required: true })}
-                className="shadow rounded-lg appearance-none border border-gray-300 dark:border-gray-600 py-2 px-3 text-gray-700 dark:text-gray-300 dark:bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 transition-all resize-none"
+                className="resize-none rounded-xl border border-stone-200/90 bg-stone-50/80 px-3.5 py-2.5 text-stone-900 placeholder:text-stone-400 focus:border-emerald-500/50 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-600 dark:bg-slate-800/80 dark:text-slate-100 dark:placeholder:text-slate-500"
                 id="message"
                 name="message"
                 rows="4"
-                placeholder="Enter your message"
+                placeholder="What would you like to share?"
               />
-               {errors.message && <span className="text-red-500 text-sm mt-1">This field is required</span>}
+               {errors.message && <span className="text-sm text-rose-500">This field is required</span>}
             </div>
-            <button type='submit' className='w-full bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 text-white font-semibold rounded-xl px-4 py-2 transition-colors duration-300 transform hover:scale-105 active:scale-95'>Send Message</button>
+            <button type='submit' className='w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 py-2.5 font-semibold text-white shadow-sm transition hover:opacity-95 active:scale-[0.99] dark:from-emerald-500 dark:to-teal-500'>Send message</button>
         </form>
     </div>
    </div>

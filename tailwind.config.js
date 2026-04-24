@@ -7,6 +7,16 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Syne', 'Plus Jakarta Sans', 'ui-sans-serif', 'sans-serif'],
+      },
+      boxShadow: {
+        glow: '0 0 40px -10px rgba(16, 185, 129, 0.35)',
+        'glow-sm': '0 0 24px -8px rgba(16, 185, 129, 0.25)',
+        card: '0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04)',
+        'card-dark': '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2)',
+      },
       colors: {
         primary: {
           50: '#f0fdf4',

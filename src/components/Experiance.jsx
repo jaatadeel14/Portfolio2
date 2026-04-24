@@ -11,7 +11,7 @@ function Experiance() {
     {
       id: 1,
       logo: html,
-      name: "MongoDB",
+      name: "HTML",
     },
     {
       id: 2,
@@ -47,23 +47,24 @@ function Experiance() {
   return (
     <div
       name="Experiance"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16 animate-fade-in"
+      className="max-w-screen-2xl container mx-auto px-4 py-12 md:px-20 md:py-20 animate-fade-in"
     >
       <div>
-        <h1 className="text-3xl font-bold mb-5 dark:text-white">Experience & Technologies</h1>
-        <p className="text-gray-700 dark:text-gray-300 mb-6">
-         Continuously learning and expanding expertise in these technologies through hands-on projects and professional experience. 
+        <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Experience</p>
+        <h1 className="font-display mb-4 text-3xl font-bold tracking-tight text-stone-900 dark:text-white md:text-4xl">Technologies</h1>
+        <p className="mb-8 max-w-2xl text-stone-600 dark:text-slate-400">
+         Continuously learning and expanding expertise in these technologies through hands-on projects and professional experience.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 my-8">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-5 lg:grid-cols-4 xl:grid-cols-5">
           {cardItem.map(({ id, logo, name }) => (
             <div
-              className="flex flex-col items-center justify-center border-2 border-gray-200 dark:border-gray-700 rounded-2xl md:w-[200px] md:h-[200px] shadow-md p-4 cursor-pointer hover:scale-110 duration-300 bg-white dark:bg-gray-800 transition-all hover:shadow-xl"
+              className="group flex min-h-[160px] flex-col items-center justify-center rounded-2xl border border-stone-200/80 bg-white/60 p-4 text-center shadow-card backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-500/40 hover:shadow-glow-sm dark:border-slate-800/80 dark:bg-slate-900/50 md:min-h-[200px] md:max-w-[220px] md:justify-self-center"
               key={id}
             >
-              <img src={logo} className="w-[120px] h-[120px] rounded-lg object-contain mb-3" alt={name} />
-              <div>
-                <div className="text-center font-semibold dark:text-white">{name}</div>
+              <div className="mb-3 rounded-xl border border-stone-200/60 bg-stone-50/90 p-2 dark:border-slate-700 dark:bg-slate-800/40">
+                <img src={logo} className="h-16 w-16 object-contain md:h-[100px] md:w-[100px]" alt={name} />
               </div>
+              <div className="font-display text-sm font-semibold text-stone-900 dark:text-white md:text-base">{name}</div>
             </div>
           ))}
         </div>
@@ -73,7 +74,3 @@ function Experiance() {
 }
 
 export default Experiance;
-
-
-
-// ok hogaya 

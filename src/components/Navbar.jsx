@@ -51,25 +51,28 @@ const Navbar = () => {
     return (
 
         <>
-            <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 transition-colors duration-300'>
-                <div className='flex justify-between items-center h-16'>
-                    <div className='flex space-x-2'>
-                        <img src={pic} className='h-12 w-12 rounded-full' alt="" />
-                        <h1 className='font-semibold text-xl cursor-pointer dark:text-white'>Adee<span className='text-green-500 dark:text-green-400 tezt-2xl'>l</span>
-                            <p className='text-sm dark:text-gray-300'>Computer Engineer</p>
-                        </h1>
+            <div className='fixed top-0 left-0 right-0 z-50 h-16 border-b border-stone-200/80 bg-white/80 backdrop-blur-md transition-colors dark:border-slate-800/80 dark:bg-slate-950/75'>
+                <div className='max-w-screen-2xl container mx-auto flex h-16 items-center justify-between px-4 md:px-20'>
+                    <div className='flex items-center gap-3'>
+                        <div className='ring-2 ring-emerald-500/30 ring-offset-2 ring-offset-stone-50 dark:ring-emerald-400/20 dark:ring-offset-slate-950 rounded-full'>
+                            <img src={pic} className='h-11 w-11 rounded-full object-cover' alt="" />
+                        </div>
+                        <div>
+                            <h1 className='font-display text-lg font-bold tracking-tight text-stone-900 dark:text-white'>Adee<span className='bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent'>l</span></h1>
+                            <p className='text-xs text-stone-500 dark:text-slate-400'>Computer Engineer</p>
+                        </div>
                     </div>
-                    <div className='flex items-center space-x-4'>
-                        <ul className='hidden md:flex space-x-8'>
+                    <div className='flex items-center gap-3 md:gap-5'>
+                        <ul className='hidden md:flex md:items-center md:gap-7'>
                             {
                                 navItems.map(({id,text})=>(
-                                    <li className='hover:scale-105 duration-200 cursor-pointer dark:text-white text-gray-700' key={id}>
+                                    <li className='cursor-pointer text-sm font-medium text-stone-600 dark:text-slate-300' key={id}>
                                        <Link to={text}
                                        smooth={true}
                                        duration={500}
                                        offset={-70}
                                        activeClass='active'
-                                       className='hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200'>
+                                       className='hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-200'>
                                        {text}
                                        </Link>
                                     </li>
@@ -78,16 +81,16 @@ const Navbar = () => {
                         </ul>
                         <button
                             onClick={toggleDarkMode}
-                            className='p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 active:scale-95'
+                            className='rounded-full border border-stone-200/80 p-2 text-stone-600 hover:bg-stone-100/80 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800/80 transition-all duration-200 active:scale-95'
                             aria-label="Toggle dark mode"
                         >
                             {darkMode ? (
-                                <MdLightMode className='text-2xl text-yellow-400 transition-transform duration-300 rotate-0' />
+                                <MdLightMode className='text-xl text-amber-400' />
                             ) : (
-                                <MdDarkMode className='text-2xl text-gray-700 transition-transform duration-300 rotate-0' />
+                                <MdDarkMode className='text-xl' />
                             )}
                         </button>
-                        <div onClick={() => setMenu(!menu)} className='md:hidden dark:text-white'>{menu ? <IoClose size={24} /> : <AiOutlineMenu size={24} />} </div>
+                        <div onClick={() => setMenu(!menu)} className='cursor-pointer p-1 text-stone-700 dark:text-slate-200 md:hidden'>{menu ? <IoClose size={24} /> : <AiOutlineMenu size={24} />} </div>
                     </div>
                 </div>
 
@@ -96,16 +99,16 @@ const Navbar = () => {
                 {
                     menu && (
 
-                        <div className='bg-white dark:bg-gray-900 transition-colors duration-300'>
-                            <ul className='md:hidden flex flex-col h-screen items-center justify-center space-y-6 text-xl'>
+                        <div className='fixed inset-0 top-16 z-40 border-t border-stone-200/80 bg-stone-50/95 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-950/95 md:hidden'>
+                            <ul className='flex h-[calc(100vh-4rem)] flex-col items-center justify-center gap-8 text-lg font-medium'>
                             {
                                 navItems.map(({id,text})=>(
-                                    <li className='hover:scale-105 duration-200 font-semibold cursor-pointer dark:text-white text-gray-700' key={id}><Link onClick={() => setMenu(!menu)} to={text}
+                                    <li className='cursor-pointer text-stone-800 dark:text-slate-100' key={id}><Link onClick={() => setMenu(!menu)} to={text}
                                     smooth={true}
                                     duration={500}
                                     offset={-70}
                                     activeClass='active'
-                                    className='hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200'>
+                                    className='hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-200'>
                                     {text}
                                     </Link></li>
                                 ))
