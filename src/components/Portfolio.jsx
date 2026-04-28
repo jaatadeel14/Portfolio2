@@ -39,7 +39,7 @@ const Portfolio = () => {
         },
       ];
   return (
-    <div name="Portfolio" className='max-w-screen-2xl container mx-auto px-4 py-12 md:px-20 md:py-16 animate-fade-in'>
+    <div name="Portfolio" className='max-w-screen-2xl container mx-auto px-4 py-12 md:px-20 md:py-16 animate-fade-in'>  // this is free code line in this area
       <div>
         <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Portfolio</p>
         <h1 className="font-display mb-2 text-3xl font-bold tracking-tight text-stone-900 dark:text-white md:text-4xl">Tech stack &amp; work</h1>
