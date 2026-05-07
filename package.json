@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "portfolio",  // This is the code that which is used for the code in the dependencies over load and in the code file
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.0",   
   "type": "module",
   "scripts": {
     "dev": "vite",
