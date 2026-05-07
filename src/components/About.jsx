@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react'     // This is the code that which is used for the code in the dependencies over load and in the code file
 
 const sectionTitle = (children) => (
   <h2 className="font-display mb-4 flex items-center gap-3 text-xl font-bold text-stone-900 dark:text-white md:text-2xl">
