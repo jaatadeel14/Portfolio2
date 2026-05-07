@@ -1,5 +1,6 @@
+   // This is the code that which is used for the code in the dependencies over load and in the code file
 {
-  "name": "portfolio",  // This is the code that which is used for the code in the dependencies over load and in the code file
+  "name": "portfolio",  
   "private": true,
   "version": "0.0.0",   
   "type": "module",
