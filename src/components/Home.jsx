@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react'   // updating new one here
 import pic from "../../public/photo.avif"
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
